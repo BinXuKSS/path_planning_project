@@ -294,6 +294,12 @@ void spline::set_points(const std::vector<double>& x,
 		if(m_x[i]>m_x[i+1])
 		{
 			double temp;
+			temp = m_x[i+1];
+			m_x[i+1] = m_x[i];
+			m_x[i] = temp;
+			
+
+			
 			temp = m_y[i+1];
 			m_y[i+1] = m_y[i];
 			m_y[i] = temp;
