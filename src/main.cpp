@@ -306,7 +306,12 @@ int main() {
 			ptsy.push_back(next_wp1[1]);
 			ptsx.push_back(next_wp2[0]);
 			ptsy.push_back(next_wp2[1]);
-			
+
+			for(int i = 0; i < ptsx.size(); i++)
+			{
+				cout << "before convert ptsx ptsy: " << ptsx[i] << " " << ptsy[i] << " "; 
+			}
+			cout << endl;
 			//convert the points to vehicle coordinate
 			for(int i = 0; i < ptsx.size(); i++)
 			{
@@ -315,7 +320,13 @@ int main() {
 
 				ptsx[i] = shift_x * cos(0-ref_yaw) - shift_y*sin(0-ref_yaw);
 				ptsy[i] = shift_x * sin(0-ref_yaw) + shift_y*cos(0-ref_yaw);
+
+				cout << "converted ptsx: " << ptsx[i] << " "; 
 			}
+
+			cout << endl;
+
+			
 
 			tk::spline s;
 			s.set_points(ptsx,ptsy);
