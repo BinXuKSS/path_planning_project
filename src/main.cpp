@@ -287,12 +287,15 @@ int main() {
 
 				ptsy.push_back(ref_prev_y);
 				ptsy.push_back(ref_y);
-
-				cout << "prev 1 x y: " << ref_x << " " << ref_y << endl;
-				cout << "prev 2 x y: " << ref_prev_x << " " << ref_prev_y << endl;
-
 				
 			}
+
+			cout << "previous_path" << endl;
+			for(int i =0; i<prev_size;i++)
+			{
+				cout << previous_path_x[i] <<" ";
+			}
+			cout << endl;
 
 			vector<double> next_wp0 = getXY(car_s + 30, 2+4*lane, map_waypoints_s, map_waypoints_x, map_waypoints_y);
 			vector<double> next_wp1 = getXY(car_s + 60, 2+4*lane, map_waypoints_s, map_waypoints_x, map_waypoints_y);
@@ -307,11 +310,7 @@ int main() {
 			ptsx.push_back(next_wp2[0]);
 			ptsy.push_back(next_wp2[1]);
 
-			for(int i = 0; i < ptsx.size(); i++)
-			{
-				cout << "before convert ptsx ptsy: " << ptsx[i] << " " << ptsy[i] << " "; 
-			}
-			cout << endl;
+
 			//convert the points to vehicle coordinate
 			for(int i = 0; i < ptsx.size(); i++)
 			{
@@ -321,10 +320,9 @@ int main() {
 				ptsx[i] = shift_x * cos(0-ref_yaw) - shift_y*sin(0-ref_yaw);
 				ptsy[i] = shift_x * sin(0-ref_yaw) + shift_y*cos(0-ref_yaw);
 
-				cout << "converted ptsx: " << ptsx[i] << " "; 
+
 			}
 
-			cout << endl;
 
 			
 
