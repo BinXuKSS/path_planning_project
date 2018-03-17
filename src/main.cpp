@@ -258,14 +258,7 @@ int main() {
 			cout << "current_x: " << car_x << endl;
 			cout << "current_y: " << car_y << endl;
 
-			double pre_x = previous_path_x[prev_size-1];
-			double pre1_x = previous_path_x[prev_size-2];
 
-			double pre_y = previous_path_y[prev_size-1];
-			double pre1_y = previous_path_y[prev_size-2];
-
-			cout << "prev 1 x y: " << pre_x << " " << pre_y << endl;
-			cout << "prev 2 x y: " << pre1_x << " " << pre1_y << endl;
 
 			if(prev_size < 2)
 			{
@@ -292,6 +285,9 @@ int main() {
 
 				ptsy.push_back(ref_prev_y);
 				ptsy.push_back(ref_y);
+
+				cout << "prev 1 x y: " << ref_x << " " << ref_y << endl;
+				cout << "prev 2 x y: " << ref_prev_x << " " << ref_prev_y << endl;
 
 				
 			}
