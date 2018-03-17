@@ -255,6 +255,9 @@ int main() {
 			double ref_y = car_y;
 			double ref_yaw = deg2rad(car_yaw);
 
+			cout << "current_x: " << car_x << endl;
+			cout << "current_y: " << car_y << endl;
+
 			if(prev_size < 2)
 			{
 				double prev_car_x = ref_x - cos(car_yaw);
@@ -341,11 +344,21 @@ int main() {
 				next_y_vals.push_back(y_point);
 			}
 
-			cout << "current_x: " << car_x << endl;
-			cout << "next_x: " << next_x_vals << endl;
+			cout << "next_x_vals" << endl;
+			for(int i = 0; i<next_x_vals.size(); i++ )
+			{
+				cout <<next_x_vals[i] << " "; 
+			}
+			cout << endl;
 
-			cout << "current_y: " << car_y << endl;
-			cout << "next_y: " << next_y_vals << endl;
+			cout << "next_y_vals" << endl;
+			for(int i = 0; i<next_y_vals.size(); i++ )
+			{
+				cout <<next_y_vals[i] << " "; 
+			}
+			cout << endl;
+
+
 			
 			
           	
