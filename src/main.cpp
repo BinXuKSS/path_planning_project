@@ -337,8 +337,6 @@ int main() {
 				double x_point = x_addon + target_x/N;
 				double y_point = s(x_point);
 
-				cout
-
 				x_addon = x_point;
 
 				double x_ref = x_point;
