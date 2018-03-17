@@ -340,6 +340,14 @@ int main() {
 				next_x_vals.push_back(x_point);
 				next_y_vals.push_back(y_point);
 			}
+
+			cout << "current_x: " << car_x << endl;
+			cout << "next_x: " << next_x_vals << endl;
+
+			cout << "current_y: " << car_y << endl;
+			cout << "next_y: " << next_y_vals << endl;
+			
+			
           	
           	msgJson["next_x"] = next_x_vals;
           	msgJson["next_y"] = next_y_vals;
