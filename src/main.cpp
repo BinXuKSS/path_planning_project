@@ -319,9 +319,9 @@ int main() {
 			double target_dist = sqrt(pow(target_x,2) + pow(target_y,2));
 
 			double x_addon = 0;
-			for(i =1; i < 50 - prev_size; i++)
+			for(int i =1; i < 50 - prev_size; i++)
 			{
-				double N = target_dist/(DT*vel);
+				double N = target_dist/(DT*ref_vel);
 				double x_point = x_addon + target_x/N;
 				double y_point = s(x_point);
 
