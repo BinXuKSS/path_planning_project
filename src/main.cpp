@@ -258,6 +258,9 @@ int main() {
 			cout << "current_x: " << car_x << endl;
 			cout << "current_y: " << car_y << endl;
 
+			cout << "prev 1 x y: " << previous_path_x[prev_size-1] << " " << previous_path_y[prev_size-1] << endl;
+			cout << "prev 2 x y: " << previous_path_x[prev_size-2] << " " << previous_path_y[prev_size-2] << endl;
+
 			if(prev_size < 2)
 			{
 				double prev_car_x = ref_x - cos(car_yaw);
