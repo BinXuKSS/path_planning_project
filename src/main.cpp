@@ -265,6 +265,8 @@ int main() {
 				double prev_car_x = ref_x - cos(car_yaw);
 				double prev_car_y = ref_y - sin(car_yaw);
 
+				cout << "small pre x,y" << prev_car_x << " " << prev_car_y << endl;
+
 				ptsx.push_back(prev_car_x);
 				ptsx.push_back(car_x);
 
@@ -295,6 +297,8 @@ int main() {
 			vector<double> next_wp0 = getXY(car_s + 30, 2+4*lane, map_waypoints_s, map_waypoints_x, map_waypoints_y);
 			vector<double> next_wp1 = getXY(car_s + 60, 2+4*lane, map_waypoints_s, map_waypoints_x, map_waypoints_y);
 			vector<double> next_wp2 = getXY(car_s + 90, 2+4*lane, map_waypoints_s, map_waypoints_x, map_waypoints_y);
+
+			cout << "next wp0" << next_wp0[0] << " " << next_wp0[1] << endl; 
 
 			ptsx.push_back(next_wp0[0]);
 			ptsy.push_back(next_wp0[1]);
@@ -333,6 +337,8 @@ int main() {
 				double x_point = x_addon + target_x/N;
 				double y_point = s(x_point);
 
+				cout
+
 				x_addon = x_point;
 
 				double x_ref = x_point;
@@ -342,8 +348,8 @@ int main() {
 				x_point = x_ref*cos(ref_yaw) - y_ref*sin(ref_yaw);
 				y_point = x_ref*sin(ref_yaw) + y_ref*cos(ref_yaw);
 
-				x_point = x_point + x_ref;
-				y_point = y_point + y_ref;
+				x_point = x_point + ref_x;
+				y_point = y_point + ref_y;
 
 				next_x_vals.push_back(x_point);
 				next_y_vals.push_back(y_point);
