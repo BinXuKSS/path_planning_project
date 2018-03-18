@@ -12,7 +12,7 @@
 #include "spline.h"
 
 #define DT 0.02 //second
-#define PREVIOUS_PATH_POINTS_TO_KEEP 25 
+#define PREVIOUS_PATH_POINTS_TO_KEEP 15 
 
 using namespace std;
 
