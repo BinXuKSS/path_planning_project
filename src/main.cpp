@@ -12,6 +12,7 @@
 #include "spline.h"
 
 #define DT 0.02 //second
+#define PREVIOUS_PATH_POINTS_TO_KEEP 25 
 
 using namespace std;
 
@@ -247,7 +248,7 @@ int main() {
           	vector<double> next_y_vals;
 			int lane = 1;
 			double ref_vel = 22;
-			int prev_size = previous_path_x.size();
+			int prev_size = min(PREVIOUS_PATH_POINTS_TO_KEEP, (int)previous_path_x.size());
 
 			vector<double> ptsx, ptsy;
 
